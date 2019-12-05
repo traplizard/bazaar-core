@@ -32,7 +32,7 @@ services:
   cli.peer:
     volumes:
       - ${WORK_DIR-/home/docker}/crypto-config/hosts:/etc/hosts
-      - ${CHAINCODE_HOME-/home/docker/chaincode}:/opt/chaincode
+#      - ${CHAINCODE_HOME-/home/docker/chaincode}:/opt/chaincode
       - ${WORK_DIR-/home/docker}/chaincode/go:/opt/gopath/src
       - ${WORK_DIR-/home/docker}/crypto-config:/etc/hyperledger/crypto-config
 #      - ${WORK_DIR-/home/docker}/crypto-config/peerOrganizations/${ORG:-org1}.${DOMAIN:-example.com}/users/Admin@${ORG:-org1}.${DOMAIN:-example.com}:/etc/hyperledger/crypto/peeradmin
