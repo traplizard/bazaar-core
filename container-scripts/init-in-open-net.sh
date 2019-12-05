@@ -36,11 +36,11 @@ function main() {
     sleep 3
     if [ $createResult -eq 0 ]; then
         instantiateChaincode ${DNS_CHANNEL} ${SERVICE_CC_NAME}
-        registerOrgInServiceChaincode ${DNS_CHANNEL} ${SERVICE_CC_NAME}
     fi
 
     if [[ $joinResult -eq 0 && -n "$BOOTSTRAP_IP" ]]; then
-        registerOrgInserviceChaincode ${DNS_CHANNEL} ${SERVICE_CC_NAME}
+        registerOrdererInServiceChaincode ${DNS_CHANNEL} ${SERVICE_CC_NAME} #TODO: check if already exists
+        registerOrgInServiceChaincode ${DNS_CHANNEL} ${SERVICE_CC_NAME}
     fi
 }
 
@@ -90,18 +90,18 @@ function joinServiceChannel() {
     return ${joinResult}
 }
 
-function registerOrgInServiceChaincode() {
+function registerOrdererInServiceChaincode() {
     local serviceChannel=${1:?Service channel name is required}
     local serviceChaincode=${2:?Service chaincode is required}
 
-    sleep 5
+    sleep 3
     if [ -n "$BOOTSTRAP_IP" ]; then
         printYellow "\nRegister BOOTSTRAP_IP: $BOOTSTRAP_IP\n"
         invokeChaincode ${serviceChannel} ${SERVICE_CC_NAME} "[\"registerOrderer\",\"${ORDERER_NAME}\", \"${ORDERER_DOMAIN}\", \"${ORDERER_GENERAL_LISTENPORT}\", \"$BOOTSTRAP_IP\"]"
     fi
 }
 
-function registerOrgInserviceChaincode() {
+function registerOrgInServiceChaincode() {
     local serviceChannel=${1:?Service channel name is required}
     local serviceChaincode=${2:?Service chaincode is required}
 
