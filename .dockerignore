@@ -5,4 +5,6 @@ crypto-config
 docs
 extra
 data
+ssl-certs
+https
 **/node_modules
