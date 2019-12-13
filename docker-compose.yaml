@@ -267,13 +267,14 @@ services:
       - WWW_PORT=${WWW_PORT:-80}
       - MULTIHOST
       - UI_LISTEN_BLOCK_OPTS
-      - AUTH_MODE=${AUTH_MODE:-CA}
       - FABRIC_STARTER_HOME=${PWD}
 #      - HFC_LOGGING={"debug":"console","info":"console"}
       - HFC_LOGGING={"debug":"/dev/null","info":"/dev/null"}
       - ORDERER_BATCH_TIMEOUT=${ORDERER_BATCH_TIMEOUT:-2}
       - DOCKER_REGISTRY
       - BOOTSTRAP_PORT
+      - CRYPTO_ALGORITHM
+      - AUTH_MODE
       - SIGNATURE_HASH_FAMILY=${SIGNATURE_HASH_FAMILY:-SHA2}
 # to troubleshoot grpc issues https://github.com/grpc/grpc/blob/master/doc/environment_variables.md
 #      - GRPC_VERBOSITY=DEBUG
