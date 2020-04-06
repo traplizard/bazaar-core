@@ -7,7 +7,7 @@ source ../lib/util/util.sh 2>/dev/null # for IDE code completion
 usageMsg="ORG=<org name> ORDERER_NAME=<orderer instance name> $0"
 exampleMsg="ORG=org1 ORDERER_NAME=raft0 $0"
 
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_NAME:=orderer}
 : ${ORDERER_NAME_PREFIX:=raft}
 : ${ORDERER_DOMAIN:=$DOMAIN}

@@ -3,7 +3,7 @@
 source lib/util/util.sh
 
 
-: ${DOMAIN:="example.com"}
+: ${DOMAIN:="bazaar.com"}
 : ${ORDERER_DOMAIN:=${DOMAIN}}
 : ${ORG:="org1"}
 : ${WGET_OPTS:="--verbose -N"}
@@ -89,9 +89,9 @@ function downloadMSP() {
 
 function certificationsToEnv() {
     org=$1
-    echo "export ORG_ADMIN_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-example.com}/msp/admincerts/Admin@${org}.${DOMAIN:-example.com}-cert.pem | base64 -w 0\` \
-      && export ORG_ROOT_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-example.com}/msp/cacerts/ca.${org}.${DOMAIN:-example.com}-cert.pem | base64 -w 0\` \
-      && export ORG_TLS_ROOT_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-example.com}/msp/tlscacerts/tlsca.${org}.${DOMAIN:-example.com}-cert.pem | base64 -w 0\`"
+    echo "export ORG_ADMIN_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-bazaar.com}/msp/admincerts/Admin@${org}.${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0\` \
+      && export ORG_ROOT_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-bazaar.com}/msp/cacerts/ca.${org}.${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0\` \
+      && export ORG_TLS_ROOT_CERT=\`cat crypto-config/peerOrganizations/${org}.${DOMAIN:-bazaar.com}/msp/tlscacerts/tlsca.${org}.${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0\`"
 }
 
 function fetchChannelConfigBlock() {

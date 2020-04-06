@@ -4,9 +4,9 @@ source lib.sh
 
 
 org1=${1:-org1}
-domain1=${2:-example.com}
+domain1=${2:-bazaar.com}
 org2=${3:-org2}
-domain2=${4:-example.com}
+domain2=${4:-bazaar.com}
 
 
 : ${RAFT0_PORT:=7050}

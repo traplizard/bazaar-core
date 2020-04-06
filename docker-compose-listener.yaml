@@ -12,10 +12,10 @@ services:
 #    build: listener
     image: ${DOCKER_REGISTRY:-docker.io}/olegabu/fabric-starter-listener:${FABRIC_STARTER_VERSION:-latest}
     restart: always
-    container_name: dns.listener.${ORG:-org1}.${DOMAIN:-example.com}
+    container_name: dns.listener.${ORG:-org1}.${DOMAIN:-bazaar.com}
     environment:
       - ORG=${ORG:-org1}
-      - DOMAIN=${DOMAIN:-example.com}
+      - DOMAIN=${DOMAIN:-bazaar.com}
       - CRYPTO_CONFIG_DIR=/usr/src/app/crypto-config
       - ENROLL_ID
       - ENROLL_SECRET
@@ -34,10 +34,10 @@ services:
 #    build: listener
 #    image: olegabu/fabric-starter-listener:${FABRIC_STARTER_VERSION:-latest}
 #    #    restart: always
-#    container_name: debug.listener.${ORG:-org1}.${DOMAIN:-example.com}
+#    container_name: debug.listener.${ORG:-org1}.${DOMAIN:-bazaar.com}
 #    environment:
 #      - ORG=${ORG:-org1}
-#      - DOMAIN=${DOMAIN:-example.com}
+#      - DOMAIN=${DOMAIN:-bazaar.com}
 #      - CRYPTO_CONFIG_DIR=/usr/src/app/crypto-config
 #      - ENROLL_ID
 #      - ENROLL_SECRET

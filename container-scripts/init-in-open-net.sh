@@ -16,7 +16,7 @@ env|sort
 
 downloadOrdererMSP ${ORDERER_NAME} ${ORDERER_DOMAIN} ${ORDERER_WWW_PORT}
 
-ORDERER_CRYPTO_CONFIG_DIR=/etc/hyperledger/crypto-config/ordererOrganizations/${ORDERER_DOMAIN:-example.com}/orderers/${ORDERER_NAME:-orderer}.${ORDERER_DOMAIN:-example.com}
+ORDERER_CRYPTO_CONFIG_DIR=/etc/hyperledger/crypto-config/ordererOrganizations/${ORDERER_DOMAIN:-bazaar.com}/orderers/${ORDERER_NAME:-orderer}.${ORDERER_DOMAIN:-bazaar.com}
 
 if [ ! -d "${ORDERER_CRYPTO_CONFIG_DIR}" ]; then
     exit
@@ -26,8 +26,8 @@ ORG_CORE_PEER_LOCALMSPID=${CORE_PEER_LOCALMSPID}
 ORG_CORE_PEER_MSPCONFIGPATH=${CORE_PEER_MSPCONFIGPATH}
 ORG_CORE_PEER_TLS_ROOTCERT_FILE=${CORE_PEER_TLS_ROOTCERT_FILE}
 
-export CORE_PEER_LOCALMSPID=${ORDERER_NAME}.${ORDERER_DOMAIN:-example.com}
-export CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/crypto-config/ordererOrganizations/${ORDERER_DOMAIN:-example.com}/users/Admin@${ORDERER_DOMAIN:-example.com}/msp
+export CORE_PEER_LOCALMSPID=${ORDERER_NAME}.${ORDERER_DOMAIN:-bazaar.com}
+export CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/crypto-config/ordererOrganizations/${ORDERER_DOMAIN:-bazaar.com}/users/Admin@${ORDERER_DOMAIN:-bazaar.com}/msp
 export CORE_PEER_TLS_ROOTCERT_FILE=${ORDERER_CRYPTO_CONFIG_DIR}/tls/ca.crt
 echo -e "\n\nTrying to add  ${ORG} to consortium\n\n"
 

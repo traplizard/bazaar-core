@@ -10,9 +10,9 @@ services:
 
   certs.generate:
     image: ${DOCKER_REGISTRY:-docker.io}/olegabu/fabric-starter-rest:${FABRIC_STARTER_VERSION:-latest}
-    container_name: certs.${ORG:-org1}.${DOMAIN:-example.com}
+    container_name: certs.${ORG:-org1}.${DOMAIN:-bazaar.com}
     environment:
-      - CERT_ORG=${ORG:-org1}.${DOMAIN:-example.com}
+      - CERT_ORG=${ORG:-org1}.${DOMAIN:-bazaar.com}
       - CERT_DAYS=${CERT_DAYS:-365}
       - CERT_COUNTRY=${CERT_COUNTRY:-US}
       - CERT_STATE=${CERT_STATE:-N/A}
@@ -32,7 +32,7 @@ services:
   www.peer:
     environment:
       - ORG=${ORG:-org1}
-      - DOMAIN=${DOMAIN:-example.com}
+      - DOMAIN=${DOMAIN:-bazaar.com}
     ports:
       - ${API_PORT:-4000}:4000
     volumes:

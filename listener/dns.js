@@ -4,9 +4,9 @@ const fs = require('fs');
 const hostsFile = '/etc/hosts';
 
 // when adding a new org:
-// ./chaincode-invoke.sh common dns '["put","192.168.99.102","peer0.org2.example.com www.org2.example.com"]'
+// ./chaincode-invoke.sh common dns '["put","192.168.99.102","peer0.org2.bazaar.com www.org2.bazaar.com"]'
 // verify ip was added to hosts file and the name is now resolvable
-// docker exec api.org1.example.com wget peer0.org2.example.com
+// docker exec api.org1.bazaar.com wget peer0.org2.bazaar.com
 
 module.exports = async function(block, fabricStarterClient) {
   logger.debug(block);

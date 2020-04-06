@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 : ${SYSTEM_CHANNEL_ID:=orderer-system-channel}
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_DOMAIN:=${ORDERER_DOMAIN:-${DOMAIN}}}
 export ORDERER_DOMAIN
 

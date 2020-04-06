@@ -4,7 +4,7 @@ function info() {
     echo -e "************************************************************\n\033[1;33m${1}\033[m\n************************************************************"
 }
 
-export DOMAIN=${DOMAIN:-example.com}
+export DOMAIN=${DOMAIN:-bazaar.com}
 
 orgs=${@:-org1}
 first_org=${1:-org1}

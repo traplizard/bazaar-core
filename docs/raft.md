@@ -21,7 +21,7 @@ thus we define names and ports for the raft-orderers.
 Execute this on both organization nodes:
 
 ```bash
-export DOMAIN=example.com
+export DOMAIN=bazaar.com
 export ORDERER_DOMAIN1=osn-org1.$DOMAIN
 export ORDERER_DOMAIN2=osn-org2.$DOMAIN
 export ORG1_IP=<IP1>

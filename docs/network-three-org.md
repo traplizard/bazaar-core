@@ -8,8 +8,8 @@ number of member organizations running in docker containers on the local machine
 ./network-create-local.sh org1 org2 org3
 ```
 
-This will create a network with `example.com` domain and container names like `peer0.org1.example.com`, 
-`api.org2.example.com` and API ports 4000, 4001, 4002; will create a channel named *common* 
+This will create a network with `bazaar.com` domain and container names like `peer0.org1.bazaar.com`, 
+`api.org2.bazaar.com` and API ports 4000, 4001, 4002; will create a channel named *common* 
 and nodejs chaincode *reference* with its source in this repo [./chaincode/node/reference](./chaincode/node/reference). 
 
 Member organization's docker containers are started with default docker-compose config files 

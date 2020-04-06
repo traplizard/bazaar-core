@@ -4,7 +4,7 @@ source lib.sh
 source lib/util/util.sh
 
 export MULTIHOST=true
-export DOMAIN=${DOMAIN:-example.com}
+export DOMAIN=${DOMAIN:-bazaar.com}
 
 declare -a ORGS_MAP=${@:-org1}
 orgs=`parseOrganizationsForDockerMachine ${ORGS_MAP}`

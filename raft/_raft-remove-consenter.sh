@@ -8,7 +8,7 @@ CONSENTER_INDEX=${1:?Concenter index to remove is requried}
 
 
 : ${ORG:=org1}
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_DOMAIN:=${DOMAIN}}
 : ${ORDERER_NAME:=orderer}
 

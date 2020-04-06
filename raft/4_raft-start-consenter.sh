@@ -6,7 +6,7 @@ source ../lib.sh 2>/dev/null # for IDE code completion
 
 REMOTE_WWW_ADDR=${1:?Remote www addr is requried}
 
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_NAME:=orderer}
 : ${ORDERER_DOMAIN:=${DOMAIN}}
 : ${ORDERER_GENERAL_LISTENPORT:=7050}

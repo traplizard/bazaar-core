@@ -31,7 +31,7 @@ Invoke function `put` of chaincode *reference* on channel *common* to save entit
 With `["targets"]`:
 ```bash
 curl -H "Authorization: Bearer $JWT" -H "Content-Type: application/json" \
-http://localhost:4000/channels/common/chaincodes/reference -d '{"fcn":"put","args":["account","1","{name:\"one\"}"],"targets":["peer0.org1.example.com","peer0.org2.example.com"]}'
+http://localhost:4000/channels/common/chaincodes/reference -d '{"fcn":"put","args":["account","1","{name:\"one\"}"],"targets":["peer0.org1.bazaar.com","peer0.org2.bazaar.com"]}'
 ```
 Without `["targets"]` submits for endorsement to all orgs required by the endorsement policy:
 ```bash
@@ -49,7 +49,7 @@ Query function `list` of chaincode *reference* on channel *common* with args `["
 With `["targets"]`:
 ```bash
 curl -H "Authorization: Bearer $JWT" \
-'http://localhost:4000/channels/common/chaincodes/reference?fcn=list&args=%5B%22account%22%5D&targets=%5B%22peer0.org1.example.com%22%5D'
+'http://localhost:4000/channels/common/chaincodes/reference?fcn=list&args=%5B%22account%22%5D&targets=%5B%22peer0.org1.bazaar.com%22%5D'
 ```
 Without `["targets"]` returns query results from all orgs of the channel:
 ```bash

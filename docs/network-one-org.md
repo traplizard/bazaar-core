@@ -12,7 +12,7 @@ Clear old crypto-information, docker containers, volums, etc before starting new
 Blockchain network related settings like `DOMAIN`, `organization names`, used `ports`, etc. can be set by environment 
 variables (by default DOMAIN=exampel.com ORG=org1 are used): 
 ```bash
-export ORG=org1 DOMAIN=example.com
+export ORG=org1 DOMAIN=bazaar.com
 ```   
 
 Start docker containers for *orderer* (crypto-materials, certificates and keys will be auto-generated inside the containers):

@@ -4,7 +4,7 @@ PeerOrgs:
     Domain: ${ORG}.${DOMAIN}
 
     CA:
-       Hostname: ca # implicitly ca.ORG.example.com
+       Hostname: ca # implicitly ca.ORG.bazaar.com
 
     # ---------------------------------------------------------------------------
     # "Specs"
@@ -29,7 +29,7 @@ PeerOrgs:
     #                     - {{ .Hostname }}
     # ---------------------------------------------------------------------------
     # Specs:
-    #   - Hostname: foo # implicitly "foo.org1.example.com"
+    #   - Hostname: foo # implicitly "foo.org1.bazaar.com"
     #     CommonName: foo27.org5.DOMAIN # overrides Hostname-based FQDN set above
     #     SANS:
     #       - "bar.{{.Domain}}"

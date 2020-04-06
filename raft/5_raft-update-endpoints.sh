@@ -12,7 +12,7 @@ NEWCONSENTER_NAME=${1:?`printUsage "$usageMsg" "$exampleMsg"`}
 NEWCONSENTER_DOMAIN=${2:?`printUsage "$usageMsg" "$exampleMsg"`}
 NEWCONSENTER_PORT=${3:-7050}
 
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_DOMAIN:=${DOMAIN}}
 : ${ORDERER_NAME:=orderer}
 

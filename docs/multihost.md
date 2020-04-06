@@ -167,7 +167,7 @@ export DOCKER_REGISTRY=192.168.99.1:5000
 - organizations: Use `Add organization to channel` specifying IP and ports:  *"org2", "192.168.99.yy"*  (this will add dns-information for org2) 
 - organizations: `Add organization to channel`  *"org3", "192.168.99.zz"* (this will add dns-information for org3)
 - or a dns-information of an Org can be registered the blockchain-network:  
- chaincode: `dns` invoke function `registerOrg` with params `"org2.example.com" "192.168.99.yy"`
+ chaincode: `dns` invoke function `registerOrg` with params `"org2.bazaar.com" "192.168.99.yy"`
 
 - install custom chaincode
 - instantiate custom chaincode

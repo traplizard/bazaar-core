@@ -11,7 +11,7 @@ x-generate: &generate-defaults
   #    dockerfile: ./fabric-tools-extended/Dockerfile
   #    context: ./
   environment:
-    - DOMAIN=${DOMAIN:-example.com}
+    - DOMAIN=${DOMAIN:-bazaar.com}
     - LDAP_ENABLED
     - LDAP_BASE_DN
     - FABRIC_LOGGING_SPEC=orderer=DEBUG:endorser=DEBUG:nodeCmd=DEBUG:committer=DEBUG

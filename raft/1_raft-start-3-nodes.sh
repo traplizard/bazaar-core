@@ -7,7 +7,7 @@ source ../lib.sh 2>/dev/null # for IDE code completion
 usageMsg="ORG=org ORDERER_NAME_PREFIX=<orderer name prefix> $0 <new-consenter-name> <new-consenter-org> <new-consenter-domain> <new-consenter-port>"
 exampleMsg="ORG=org1 ORDERER_NAME_PREFIX=raft0 $0"
 
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 : ${ORDERER_NAME_PREFIX:=raft}
 : ${ORDERER_NAME:=orderer}
 : ${RAFT_NODES_COUNT:=3}

@@ -4,7 +4,7 @@ source lib/util/util.sh
 source lib.sh
 
 export MULTIHOST=true
-export DOMAIN=${DOMAIN-example.com}
+export DOMAIN=${DOMAIN-bazaar.com}
 
 : ${CHANNEL:=common}
 : ${CHAINCODE_INSTALL_ARGS:=reference}

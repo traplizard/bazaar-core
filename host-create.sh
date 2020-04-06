@@ -11,7 +11,7 @@ fi
 info "Create Network with vm names prefix: $VM_NAME_PREFIX"
 #read -n1 -r -p "Press any key to continue..." key
 
-: ${DOMAIN:=example.com}
+: ${DOMAIN:=bazaar.com}
 
 declare -a ORGS_MAP=${@:-org1}
 orgs=`parseOrganizationsForDockerMachine ${ORGS_MAP}`

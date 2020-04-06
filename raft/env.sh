@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export ORDERER_DOMAIN=example.com
+export ORDERER_DOMAIN=bazaar.com
 
 export WORK_DIR=./              # path to fabric-starter folder
 

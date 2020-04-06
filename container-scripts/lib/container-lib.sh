@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-: ${DOMAIN:="example.com"}
+: ${DOMAIN:="bazaar.com"}
 : ${ORG:="org1"}
 : ${ORDERER_NAME:="orderer"}
 : ${ORDERER_NAME_PREFIX:="raft"}
@@ -61,9 +61,9 @@ function certificationsToEnv() {
 
 function ordererCertificationsToEnv() {
     local mspDir="crypto-config/ordererOrganizations/${DOMAIN}/msp";
-    export ORG_ADMIN_CERT=`cat ${mspDir}/admincerts/Admin@${org}${org:+.}${DOMAIN:-example.com}-cert.pem | base64 -w 0` \
-      && export ORG_ROOT_CERT=`cat ${mspDir}/cacerts/ca.${org}${org:+.}${DOMAIN:-example.com}-cert.pem | base64 -w 0` \
-      && export ORG_TLS_ROOT_CERT=`cat ${mspDir}/tlscacerts/tlsca.${org}${org:+.}${DOMAIN:-example.com}-cert.pem | base64 -w 0`
+    export ORG_ADMIN_CERT=`cat ${mspDir}/admincerts/Admin@${org}${org:+.}${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0` \
+      && export ORG_ROOT_CERT=`cat ${mspDir}/cacerts/ca.${org}${org:+.}${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0` \
+      && export ORG_TLS_ROOT_CERT=`cat ${mspDir}/tlscacerts/tlsca.${org}${org:+.}${DOMAIN:-bazaar.com}-cert.pem | base64 -w 0`
 }
 
 function fetchChannelConfigBlock() {
