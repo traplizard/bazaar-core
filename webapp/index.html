@@ -2,11 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>fabric-starter-rest</title>
+    <title>Bazaar Network</title>
+    <style>
+        :root{
+            --color1: rgb(70, 80, 55);
+            --color2: rgb(207, 90, 12);
+            --color3: rgb(207, 178, 12);
+            --color4: rgb(226, 212, 130);
+        }
+        body{
+            background-color: var(--color1);
+            color: var(--color3);
+            font-variant: small-caps;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+        #content{
+            padding: 2%;
+            display: flex;
+        }
+        #content>div{
+            flex: 1;
+        }
+        a{
+            color: var(--color3);
+            text-decoration: none;
+        }
+        .button{
+            border: 2px solid var(--color3);
+            margin: 1% auto;
+            padding: 1%;
+            text-align: center;
+        }
+        .w1-2{
+            width: 50%;
+        }
+        h1{
+            text-align: center;
+            color: var(--color3);
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Welcome to fabric-starter-rest API server.</h1>
-    <p>Place your web application files into ./webapp folder to be served here.</p>
+    <div id="header">
+        <h1>BAZAAR</h1>
+    </div>
+    <div id="content">
+        <div>
+            <div>
+                The Bazaar network is an open-source trade ecosystem, allowing for seamless integration with blockchains, exchanges, markets, supply chains, and banks.
+            </div><div>
+                <br>We aim to provide your goods and services smart-contract guaranteed trade endpoints.
+            </div><div>
+                <br>To facilitate connection between networks, there are a suite of network configuration tools allowing for deployment of a custom organization, or integration with existing systems:
+
+                <br>• API
+                <br>• Web Shop
+                <br>• Blockchain
+                <br>• ERC20 token
+                <br>• Smart contract
+                <br>• Custom Network
+            </div><div>
+                <br>Trust on the system is provided through mutual validation.
+            </div><div>
+                <br>Open source interledger-compatable blockchain ecosystem integration.
+            </div><div>
+                <br>Blockchain DAO: built to facilitate easy utilization of distributed systems, and integration with existing supply chains`
+            </div>
+        </div>
+        <div>
+        <a href="api-docs"><div class="button w1-2">API Documentation</div></a>
+        <a href="admin"><div class="button w1-2">Admin Control Panel</div></a>
+        <a href="admin"><div class="button w1-2"><a href="admin">Block Explorer</div></a>
+        <a href="webapps/networkgraph"><div class="button w1-2">Network Graph</div></a>
+        </div>
+    </div>
 </body>
 </html>
 

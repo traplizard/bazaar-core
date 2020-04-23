@@ -5,7 +5,7 @@ source lib/util/util.sh
 
 : ${DOMAIN:="bazaar.com"}
 : ${ORDERER_DOMAIN:=${DOMAIN}}
-: ${ORG:="org1"}
+: ${ORG:="market"}
 : ${WGET_OPTS:="--verbose -N"}
 : ${FABRIC_STARTER_HOME:=.}
 : ${DOCKER_COMPOSE_OPTION_RM:="--rm"}
